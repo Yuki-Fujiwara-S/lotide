@@ -7,12 +7,12 @@ const assertEqual = function(actual, expected) {
 };
 
 
-// It's okay for eqArrays to not return true for nested arrays or arrays of objects that are identical. 
+// It's okay for eqArrays to not return true for nested arrays or arrays of objects that are identical.
 // We will save this "deeper" problem for another day.
 
 const eqArrays = function(array1, array2) {
   let boolOutput = false;
-  for (i = 0; i < array1.length; i++) {
+  for (let i = 0; i < array1.length; i++) {
     if (array1[i] === array2[i]) {
       boolOutput = true;
     } else {
