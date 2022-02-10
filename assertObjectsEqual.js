@@ -1,11 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 const eqArrays = function(array1, array2) {
   let boolOutput = false;
   if (array1.length === array2.length) {
@@ -46,7 +38,7 @@ const eqObjects = function(object1, object2) {
 
 // FUNCTION IMPLEMENTATION
 const assertObjectsEqual = function(actual, expected) {
-  const inspect = require('util').inspect; 
+  const inspect = require('util').inspect;
   if (eqObjects(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
   } else {
