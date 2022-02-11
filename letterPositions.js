@@ -1,18 +1,13 @@
-const eqArrays = function(array1, array2) {
-  let boolOutput = false;
-  if (array1.length === array2.length) {
-    for (let i = 0; i < array1.length; i++) {
-      if (array1[i] === array2[i]) {
-        boolOutput = true;
-      } else {
-        boolOutput = false;
-      }
+const eqArrays = function (array1, array2) {
+  if (array1.length !== array2.length) {
+    return false;
+  }
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] !== array2[i]) {
+      return false;
     }
   }
-  if (array1.length === 0 && array2.length === 0) {
-    boolOutput = true;
-  }
-  return boolOutput;
+  return true;
 };
 
 
@@ -23,20 +18,6 @@ const assertArraysEqual = function(array1, array2) {
     console.log(`🛑The arrays are NOT equal!🛑 : ${array1} !== ${array2}`);
   }
 };
-
-/*
-const letterPositions = function(sentence) {
-  const results = {};
-  for (let i = 0; i < sentence.length; i++) {
-    if (results[sentence[i]]) {
-      results[sentence[i]].push(i);
-    } else {
-      results[sentence[i]] = [i];
-    }
-  }
-  return results;
-};
-*/
 
 const letterPositions = function(sentence) {
   const results = {};
