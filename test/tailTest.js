@@ -1,26 +1,28 @@
-const assertEqual = require('../assertEqual');
-const tail = require('../tail');
+const assert = require('chai').assert;
+const tail   = require('../tail');
 
+describe("#tail", () => {
+  it("returns ['Lighthouse', 'Labs'] for ['Hello', 'Lighthouse', 'House']", () => {
+    const result = tail(["Hello", "Lighthouse", "Labs"]);
+    assert.deepEqual(result, ["Lighthouse", "Labs"]);
+  });
 
-// Test Case 1: Check the returned array elements
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2); // ensure we get back two elements
-assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result[1], "Labs"); // ensure second element is "Labs"
+  it("returns [], ['Hello']", () => {
+    const resultTwo = tail(["Hello"]);
+    assert.deepEqual(resultTwo, []);
+  });
 
-// Test Case 2: Array with one element
-const resultTwo = tail(["Hello"]);
-assertEqual(resultTwo.length, 0);
-assertEqual(resultTwo[0], undefined);
-assertEqual(resultTwo[1], undefined);
+  it("returns [], []", () => {
+    const resultThree = tail([]);
+    assert.deepEqual(resultThree, []);
+  });
 
-// Test Case 3: Empty array
-const resultThree = tail([]);
-assertEqual(resultThree.length, 0);
-assertEqual(resultThree[0], undefined);
-assertEqual(resultThree[1], undefined);
+  it("returns unchanged ['Yo Yo', 'Lighthouse', 'Labs'] when tail is called on  ['Yo Yo', 'Lighthouse', 'Labs']", () => {
+    const words = ["Yo Yo", "Lighthouse", "Labs"];
+    tail(words);
+    assert.deepEqual(words, ["Yo Yo", "Lighthouse", "Labs"]);
+  });
 
-// Test Case: Check the original array
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
+  
+});
+
