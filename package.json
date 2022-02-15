@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@yukifujiwara/mylotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Lodash clone for practice",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/shiawase7/lotide.git"
   },
-  "author": "",
+  "author": "Yuki Fujiwara",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/shiawase7/lotide/issues"
