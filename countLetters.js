@@ -30,3 +30,5 @@ assertEqual(lightHouseCounted["s"], 2);
 assertEqual(lightHouseCounted["e"], 3);
 assertEqual(lightHouseCounted["n"], 1);
 
+module.exports = countLetters;
+

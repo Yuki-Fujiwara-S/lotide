@@ -38,3 +38,6 @@ assertArraysEqual(helloTest["h"], [0]);
 assertArraysEqual(helloTest["e"], [1]);
 assertArraysEqual(helloTest["l"], [2,3]);
 assertArraysEqual(helloTest["o"], [4]);
+
+
+module.exports = letterPositions;

@@ -50,3 +50,5 @@ assertArraysEqual(resultMultiplied3, [3, 6, 9, 12]);
 const objects = [{name: "Yuki", age: 100}, {name: "Bukayo", age: 21}];
 const namesUpperCase = map(objects, person => person.name.toUpperCase());
 assertArraysEqual(namesUpperCase, ["YUKI", "BUKAYO"]);
+
+module.exports = map;
